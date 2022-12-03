@@ -1,0 +1,36 @@
+Class 1 -
+
+BDD - behavioral driven development -
+	Given
+	When
+	And
+	Then
+We use BDD scenarios - to give a clear understanding to other colleagues in the team
+
+
+To write the BDD scenarios in cucumber - we use special type of file
+
+User story 12345 - Search an employee
+
+Search by id
+Given user navigates to HRMS application
+When user enters valid username and password
+And user clicks on login button
+Then user navigates to dashboard page
+When user clicks on PIM option
+And user clicks on employee information button
+When user enters employee id
+And user clicks on search button
+Then user see employee information is displayed
+
+Search by name
+Given user navigates to HRMS application
+When user enters valid username and password
+And user clicks on login button
+Then user navigates to dashboard page
+When user clicks on PIM option
+And user clicks on employee information button
+When user enters valid employee name
+And user clicks on search button
+Then user see employee information is displayed
+
