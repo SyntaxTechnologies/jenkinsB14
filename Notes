@@ -34,3 +34,23 @@ When user enters valid employee name
 And user clicks on search button
 Then user see employee information is displayed
 
+Class 2 -
+
+Recap -
+      BDD - It allows us to write scenarios in gherkin language
+
+      Feature - User story
+      Scenario - Test case - every test case will be considered as scenario in BDD
+      Given - pre-requisite/pre-condition
+      When - perform actions
+      Then - Expected output
+      And - Supporting tag
+
+      Step definition - Cucumber provides you the snippet of step definition
+      In step definition, we write the code to perform actions which has been written in
+      the BDD statement
+
+      To execute all the feature files from one class, we need runner class
+
+
+

@@ -31,7 +31,6 @@ public class StepDefClass {
 
        WebElement passwordField = driver.findElement(By.id("txtPassword"));
        passwordField.sendKeys("Hum@nhrm123");
-
     }
 
     @When("user clicks on login button")
@@ -50,6 +49,9 @@ public class StepDefClass {
         }
     }
 
-
-
+    @Then("user verify dashboard page")
+    public void user_verify_dashboard_page() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
 }
