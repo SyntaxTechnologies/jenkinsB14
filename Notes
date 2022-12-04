@@ -59,6 +59,12 @@ it provides folder to structure which is easily understandable
 In framework we have 2 separate branches for
 Java -  In java, we write all java classes
 Non - Java - In non-java, we write non java part such as features, files etc
+steps package - for all step definitions
+runners package - for all runner classes
+config directory - for all config files
+features directory - for all feature files
+
+
 
 
 
