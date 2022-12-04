@@ -52,5 +52,15 @@ Recap -
 
       To execute all the feature files from one class, we need runner class
 
+To keep everything organised we need framework -
+Framework allows you to write simplified and organised code and
+it provides folder to structure which is easily understandable
+
+In framework we have 2 separate branches for
+Java -  In java, we write all java classes
+Non - Java - In non-java, we write non java part such as features, files etc
+
+
+
 
 

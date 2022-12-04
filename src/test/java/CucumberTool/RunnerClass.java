@@ -9,10 +9,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features =
-                "C:\\Users\\sohai\\IdeaProjects\\CucumberBatch14\\src\\test\\java\\CucumberTool\\Login.feature"
+                "src\\test\\java\\CucumberTool\\Login.feature"
 )
-
-
 
 
 public class RunnerClass {
