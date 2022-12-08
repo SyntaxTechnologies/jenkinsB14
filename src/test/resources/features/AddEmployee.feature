@@ -1,6 +1,6 @@
 Feature: Add Employee
 
-  @nergis @regression
+  @sprint3 @regression
   Scenario: Adding one employee
     Given user is navigated to HRMS application
     When user enters valid username and valid password

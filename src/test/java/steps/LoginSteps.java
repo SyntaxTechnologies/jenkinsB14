@@ -29,15 +29,17 @@ public class LoginSteps extends CommonMethods {
     @When("user enters valid username and valid password")
     public void user_enters_valid_username_and_valid_password() {
         WebElement usernameField = driver.findElement(By.id("txtUsername"));
-        usernameField.sendKeys(ConfigReader.getPropertyValue("username"));
+       // usernameField.sendKeys(ConfigReader.getPropertyValue("username"));
+        sendText(usernameField, ConfigReader.getPropertyValue("username"));
         WebElement passwordField = driver.findElement(By.id("txtPassword"));
-        passwordField.sendKeys(ConfigReader.getPropertyValue("password"));
+    //    passwordField.sendKeys(ConfigReader.getPropertyValue("password"));
+        sendText(passwordField, ConfigReader.getPropertyValue("password"));
     }
 
     @When("user clicks on login button")
     public void user_clicks_on_login_button() {
         WebElement loginButton = driver.findElement(By.id("btnLogin"));
-        loginButton.click();
+        click(loginButton);
     }
 
     @Then("user is successfully logged in")
