@@ -80,6 +80,10 @@ Class 4 -
     tags - to group the scenario for specific type of execution
 
 
+POM - page object model - it is a design pattern
 
+it allows QA's to keep object repository -
+in simple language, QA's write all the locators of the page in respective class
 
-
+LoginPage -
+DashboardPage -

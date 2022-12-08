@@ -33,4 +33,10 @@ public class EmployeeSearchSteps extends CommonMethods {
         System.out.println("Employee information can be seen");
     }
 
+    @When("user enters valid employee name")
+    public void user_enters_valid_employee_name() {
+        WebElement searchNameField = driver.findElement(By.id("empsearch_employee_name_empName"));
+       sendText(searchNameField, "dawggy");
+    }
+
 }
