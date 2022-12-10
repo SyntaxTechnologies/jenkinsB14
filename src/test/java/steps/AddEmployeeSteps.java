@@ -46,4 +46,9 @@ public class AddEmployeeSteps extends CommonMethods {
         System.out.println("Employee Added");
     }
 
+    @When("user enter {string} and {string}")
+    public void user_enter_and(String firstName, String lastName) {
+        sendText(addEmployee.firstNameField, firstName);
+        sendText(addEmployee.lastNameField, lastName);
+    }
 }

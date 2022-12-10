@@ -106,5 +106,22 @@ Hooks - we write pre condition and post condition using hooks in cucumber
 
 Rules - Hooks class must be created inside steps package
 
+Background - it is applicable only for one feature file
+             it means for every feature file background will be different
+             steps which are common among all the scenarios of that featur file
+             will be taken into background but make sure the flow is not broken.
+             if the flow breaks, then we cannot take steps in background after that
+
+
+Hooks VS background
+
+Hooks are applicable for whole project (for all the feature files)
+Background is applicable for one feature file and varies from file to file
+First Hooks execute then background execute then scenario execute
+
+
+
+
+
 
 
