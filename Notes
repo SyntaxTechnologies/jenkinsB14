@@ -100,5 +100,11 @@ Class 5 -
         screens available in the application and keep all the locators of this page
         in it
 
+Hooks - we write pre condition and post condition using hooks in cucumber
+    @Before - pre condition needs to be mentioned in this
+    @After - post condition needs to be mentioned in this
+
+Rules - Hooks class must be created inside steps package
+
 
 

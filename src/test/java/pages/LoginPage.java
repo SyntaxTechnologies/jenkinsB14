@@ -23,5 +23,4 @@ public class LoginPage extends CommonMethods {
        //call selenium page factory
         PageFactory.initElements(driver, this);
     }
-
 }

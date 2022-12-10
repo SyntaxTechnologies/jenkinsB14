@@ -2,7 +2,7 @@ Feature: US-321 Searching the employee
 
   @batch14 @sprint4
   Scenario: Search employee by id
-    Given user is navigated to HRMS application
+   # Given user is navigated to HRMS application
     When user enters valid username and valid password
     And user clicks on login button
     Then user is successfully logged in
@@ -14,7 +14,7 @@ Feature: US-321 Searching the employee
 
   @sprint4 @test
   Scenario: Search employee by name
-    Given user is navigated to HRMS application
+   # Given user is navigated to HRMS application
     When user enters valid username and valid password
     And user clicks on login button
     Then user is successfully logged in
