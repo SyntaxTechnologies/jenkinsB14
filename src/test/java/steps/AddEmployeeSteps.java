@@ -51,4 +51,11 @@ public class AddEmployeeSteps extends CommonMethods {
         sendText(addEmployee.firstNameField, firstName);
         sendText(addEmployee.lastNameField, lastName);
     }
+
+    @When("user enter {string} and {string} for adding multiple employees")
+    public void user_enter_and_for_adding_multiple_employees(String firstNameValue, String lastNameValue) {
+        sendText(addEmployee.firstNameField, firstNameValue);
+        sendText(addEmployee.lastNameField, lastNameValue);
+    }
+
 }

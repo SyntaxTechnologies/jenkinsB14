@@ -20,5 +20,19 @@ Feature: Add Employee
     And user clicks on save button
     Then employee added successfully
 
+  @outline
+  Scenario Outline: Adding multiple employees using feature file
+    And user enter "<firstName>" and "<lastName>" for adding multiple employees
+    And user clicks on save button
+    Then employee added successfully
+    Examples:
+      | firstName | lastName |
+      |gulnam     |mazar     |
+      |rampal     |chambel   |
+      |azam       |asel      |
+
+
+
+
 
 
