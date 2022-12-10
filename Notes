@@ -87,3 +87,18 @@ in simple language, QA's write all the locators of the page in respective class
 
 LoginPage -
 DashboardPage -
+
+
+Class 5 -
+        Recap - runner class - to run our test cases as per the requirement
+                                to generate missing steps
+                                to print the steps into the console
+                                to generate the report
+
+        Page object model - to have organised code and easy to maintain structure
+        according to it, we create separate class (page) according to the
+        screens available in the application and keep all the locators of this page
+        in it
+
+
+

@@ -29,7 +29,7 @@ public class LoginSteps extends CommonMethods {
 
     @When("user enters valid username and valid password")
     public void user_enters_valid_username_and_valid_password() {
-        LoginPage login = new LoginPage();
+       //LoginPage login = new LoginPage();
      //   WebElement usernameField = driver.findElement(By.id("txtUsername"));
        // usernameField.sendKeys(ConfigReader.getPropertyValue("username"));
         sendText(login.usernameTextField, ConfigReader.getPropertyValue("username"));
@@ -40,7 +40,7 @@ public class LoginSteps extends CommonMethods {
 
     @When("user clicks on login button")
     public void user_clicks_on_login_button() {
-        LoginPage login = new LoginPage();
+      //  LoginPage login = new LoginPage();
       //  WebElement loginButton = driver.findElement(By.id("btnLogin"));
         click(login.loginButton);
     }
@@ -57,7 +57,7 @@ public class LoginSteps extends CommonMethods {
 
     @When("user enters ess username and ess password")
     public void user_enters_ess_username_and_ess_password() {
-        LoginPage login = new LoginPage();
+       // LoginPage login = new LoginPage();
        // WebElement usernameField = driver.findElement(By.id("txtUsername"));
         sendText(login.usernameTextField, "asmahuma321");
      //   WebElement passwordField = driver.findElement(By.id("txtPassword"));
@@ -66,7 +66,7 @@ public class LoginSteps extends CommonMethods {
 
     @When("user enters invalid username and password")
     public void user_enters_invalid_username_and_password() {
-        LoginPage login = new LoginPage();
+       // LoginPage login = new LoginPage();
        // WebElement usernameField = driver.findElement(By.id("txtUsername"));
         sendText(login.usernameTextField, "admin123");
       //  WebElement passwordField = driver.findElement(By.id("txtPassword"));
