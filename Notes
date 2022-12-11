@@ -141,6 +141,7 @@ Class 6 -
     instead of scenario, we use scenario outline with examples table
     -- in examples table, we pass multiple data sets using keys and values
 
+
 Data table -
      it allows us to pass multiple sets of data without executing background
 
