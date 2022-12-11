@@ -6,7 +6,10 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.CommonMethods;
+import utils.Constants;
+import utils.ExcelReader;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -87,5 +90,40 @@ public class AddEmployeeSteps extends CommonMethods {
         }
     }
 
+    @When("user adds multiple employee from excel using {string} and verify it")
+    public void user_adds_multiple_employee_from_excel_using_and_verify_it(String sheetName) throws InterruptedException {
+
+        List<Map<String, String>> empFromExcel =
+                ExcelReader.excelListIntoMap(Constants.TESTDATA_FILEPATH, sheetName);
+
+
+        //it returns one map from list of maps
+        Iterator<Map<String, String>> itr = empFromExcel.iterator();
+        while (itr.hasNext()){
+            //it returns the key and value for employee from excel
+            Map<String, String> mapNewEmp = itr.next();
+
+            sendText(addEmployee.firstNameField, mapNewEmp.get("firstName"));
+            sendText(addEmployee.middleNameField, mapNewEmp.get("middleName"));
+            sendText(addEmployee.lastNameField, mapNewEmp.get("lastName"));
+
+            sendText(addEmployee.photograph, mapNewEmp.get("photograph"));
+
+            if(!addEmployee.checkBox.isSelected()){
+               click(addEmployee.checkBox);
+            }
+
+            sendText(addEmployee.createusernameField, mapNewEmp.get("username"));
+            sendText(addEmployee.createpasswordField, mapNewEmp.get("password"));
+            sendText(addEmployee.confirmpasswordField, mapNewEmp.get("confirmPassword"));
+
+            click(addEmployee.saveButton);
+
+            //verification is in home-work
+            Thread.sleep(2000);
+            click(dashboard.addEmployeeOption);
+            Thread.sleep(2000);
+        }
+    }
 
 }

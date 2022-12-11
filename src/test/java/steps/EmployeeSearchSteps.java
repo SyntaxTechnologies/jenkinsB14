@@ -42,5 +42,4 @@ public class EmployeeSearchSteps extends CommonMethods {
       // sendText(searchNameField, "dawggy");
         sendText(employeeList.empSearchNameField, "ms");
     }
-
 }

@@ -145,5 +145,15 @@ Class 6 -
 Data table -
      it allows us to pass multiple sets of data without executing background
 
-Examples table - hooks and background execute every time as per the data set
-Data table - hooks and background execute just one time
+Outline - Examples table - hooks and background execute every time as per the data set
+Scenario - Data table - hooks and background execute just one time
+
+Working with excel
+.xls - HSSF
+.xlsx - XSSF
+
+
+
+
+
+
