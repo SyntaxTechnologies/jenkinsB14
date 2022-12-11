@@ -119,9 +119,30 @@ Hooks are applicable for whole project (for all the feature files)
 Background is applicable for one feature file and varies from file to file
 First Hooks execute then background execute then scenario execute
 
+Class 6 -
+    Recap -
+        Page object model with page initializer class
+        in this initializer class, we initialize all the objects of page classes and
+        call the method in common methods class in openbrowser method
 
+    We created a collection point in steps classes -
+    -- methods call from common method, locators call from respective page classes using
+       object of that class
 
+    Background - same steps in feature file among all the scenarios should be a part of it
+    Hooks - Pre condition and Post condition for the entire project
+    here we use 2 hooks - @Before and @After
 
+    Parameterization testing
+    -- we can one add employee using feature file - 'instead of passing hardcoded data,
+    we pass values inside the scenario such as "abc" , "xyz" etc'
 
+    -- to increase the scope of testing, we use data driven testing concept
+    instead of scenario, we use scenario outline with examples table
+    -- in examples table, we pass multiple data sets using keys and values
 
+Data table -
+     it allows us to pass multiple sets of data without executing background
 
+Examples table - hooks and background execute every time as per the data set
+Data table - hooks and background execute just one time
