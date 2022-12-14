@@ -49,6 +49,7 @@ public class LoginSteps extends CommonMethods {
     @Then("user is successfully logged in")
     public void user_is_successfully_logged_in() {
       //  WebElement welcomeMessage = driver.findElement(By.id("welcome"));
+     //   System.out.println(10/0);
         if(dashboard.welcomeMessage.isDisplayed()){
             System.out.println("Test case is passed");
         }else{
