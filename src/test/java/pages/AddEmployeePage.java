@@ -32,6 +32,9 @@ public class AddEmployeePage extends CommonMethods {
     @FindBy(id = "re_password")
     public WebElement confirmpasswordField;
 
+    @FindBy(id = "employeeId")
+    public WebElement empIdLocator;
+
     @FindBy(id = "btnSave")
     public WebElement saveButton;
 

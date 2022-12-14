@@ -153,6 +153,15 @@ Working with excel
 .xlsx - XSSF
 
 
+Class 7 -
+   Recap - parameters passing for adding the employee
+   -- earlier approach was - hardcoded data
+   -- passing one set of data from feature file
+   -- scenario outline - examples table (for passing multiple data sets)
+   -- data table - hooks, background execute one time for multiple data sets
+   -- excel - to pass large volume of data
+
+
 
 
 
