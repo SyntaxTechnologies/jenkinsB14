@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pages.LoginPage;
 import utils.CommonMethods;
 import utils.ConfigReader;
+import utils.Log;
 
 import java.util.concurrent.TimeUnit;
 
@@ -49,7 +51,7 @@ public class LoginSteps extends CommonMethods {
     @Then("user is successfully logged in")
     public void user_is_successfully_logged_in() {
       //  WebElement welcomeMessage = driver.findElement(By.id("welcome"));
-     //   System.out.println(10/0);
+        //System.out.println(10/0);
         if(dashboard.welcomeMessage.isDisplayed()){
             System.out.println("Test case is passed");
         }else{

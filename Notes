@@ -168,6 +168,23 @@ how to open the report -
 right click - open in - browser - chrome
 
 
+Class - 8
+    Recap -
+    screenshot method - in cucumber it accept array of byte
+    to get the unique screenshot name, we have implemented timestamp method
+    we used Scenario class of cucumber to get the details  of execution
+    to generate report - we use html plugin from runner class
+    reports always generate in target folder
+    we execute our code from pom.xml file, to achieve this we have used
+    maven surefire plugin
+
+    maven cucumber reporting plugin we use to get more detailed and colorful report
+
+Log files - when we execute our code, we need to sharpen our debugging skills
+          to have quick information about every step of execution, we need messages in the
+          form of report.
+          To get the details added by us, we need to create log files.
+          To create this log file, we use log4j concept
 
 
 
