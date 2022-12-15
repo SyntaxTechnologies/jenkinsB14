@@ -186,6 +186,17 @@ Log files - when we execute our code, we need to sharpen our debugging skills
           To get the details added by us, we need to create log files.
           To create this log file, we use log4j concept
 
+maven lifecycle -
+        compile - source code converts into binary code
+        package - code will be packaged into jar files
+        install - jars will be installed to local repo .m2
+        deploy - here jars will go to remote repo
+        test - code will be tested in this lifecycle
+        clean - this will clean your target folder
+
+
+        when you run test -
+        this will execute compile - install - deploye - test
 
 
 
