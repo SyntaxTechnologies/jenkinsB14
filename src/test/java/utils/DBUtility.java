@@ -2,6 +2,7 @@ package utils;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,13 +13,14 @@ public class DBUtility {
 
     /**
      * This method create connection to the database, execute query and return object ResulSet
+     *
      * @param sqlQuery
      * @return ResultSet
      */
     public static ResultSet getResultSet(String sqlQuery) {
 
-        Connection conn=null;
-        Statement statement=null;
+        Connection conn = null;
+        Statement statement = null;
         try {
             conn = DriverManager.getConnection(
                     ConfigReader.getPropertyValue("dbUrl"),
@@ -38,7 +40,7 @@ public class DBUtility {
                 if (conn != null) {
                     conn.close();
                 }
-            }catch(SQLException e){
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
@@ -47,38 +49,45 @@ public class DBUtility {
 
     /**
      * This method return an Object of ResultSetMetaData
+     *
      * @param query
      * @return ResultSetMetaData
      */
-    public static ResultSetMetaData getRsetMetada(String query){
-        rset= getResultSet(query);
-        rSetMetaData=null;
+    public static ResultSetMetaData getRsetMetada(String query) {
+        rset = getResultSet(query);
+        rSetMetaData = null;
         try {
-            rSetMetaData=rset.getMetaData();
-        }catch(SQLException e){
+            rSetMetaData = rset.getMetaData();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return rSetMetaData;
     }
 
     /**
-     * This methods extract data from ResultSet and stores into List of Maps
+     * This method extract data from ResultSet and stores into List of Maps
      */
 
-    public static List<Map<String, String>> getListOfMapsFromRset(String query){
+    public static List<Map<String, String>> getListOfMapsFromRset(String query) {
 
-
+        rSetMetaData = getRsetMetada(query);
         List<Map<String, String>> listFromRset = new ArrayList<>();
         Map<String, String> mapData;
 
         try {
-            ResultSetMetaData rsetMetaData = rset.getMetaData();
+            while (rset.next()) {
+                mapData = new LinkedHashMap<>();
 
-
-
-        }catch(SQLException e){
+                for (int i = 1; i <= rSetMetaData.getColumnCount(); i++) {
+                    String key = rSetMetaData.getColumnName(i);
+                    String value = rset.getString(key);
+                    mapData.put(key, value);
+                }
+                listFromRset.add(mapData);
+            }
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        return listFromRset;
     }
 }
