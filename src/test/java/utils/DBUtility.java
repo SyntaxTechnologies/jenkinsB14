@@ -32,18 +32,6 @@ public class DBUtility {
 
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-                if (conn != null) {
-                    conn.close();
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
         return rset;
     }
@@ -76,14 +64,17 @@ public class DBUtility {
         Map<String, String> mapData;
 
         try {
+            //iterates over the rows
             while (rset.next()) {
                 mapData = new LinkedHashMap<>();
-
+                //iterates over the columns
                 for (int i = 1; i <= rSetMetaData.getColumnCount(); i++) {
                     String key = rSetMetaData.getColumnName(i);
                     String value = rset.getString(key);
+                    //we store data from every column into a map
                     mapData.put(key, value);
                 }
+                //we store map with Data into a List
                 listFromRset.add(mapData);
             }
         } catch (SQLException e) {

@@ -19,6 +19,7 @@ import java.util.Map;
 public class AddEmployeeSteps extends CommonMethods {
 
     String id;
+    String fName, lName;
 
     @When("user clicks on PIM option")
     public void user_clicks_on_pim_option() {
@@ -52,6 +53,8 @@ public class AddEmployeeSteps extends CommonMethods {
 
     @When("user enter {string} and {string}")
     public void user_enter_and(String firstName, String lastName) {
+        fName=firstName;
+        lName=lastName;
         sendText(addEmployee.firstNameField, firstName);
         sendText(addEmployee.lastNameField, lastName);
     }
@@ -155,11 +158,12 @@ public class AddEmployeeSteps extends CommonMethods {
     public void added_employee_is_displayed_in_database() {
 
         String query=DatabaseSteps.getFnameLnameQuery()+id;
-
-        //System.out.println(query);
-
         List<Map<String, String>> dataFromDatabase=DBUtility.getListOfMapsFromRset(query);
 
-        System.out.println(dataFromDatabase);
+        String fNameFromDb=dataFromDatabase.get(0).get("emp_firstname");
+        String lNameFromDb=dataFromDatabase.get(0).get("emp_lastname");
+
+        Assert.assertEquals(fName, fNameFromDb);
+        Assert.assertEquals(lName, lNameFromDb);
     }
 }
