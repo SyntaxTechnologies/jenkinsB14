@@ -1,5 +1,7 @@
 package pages;
 
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.apache.commons.math3.analysis.function.Add;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -46,4 +48,5 @@ public class AddEmployeePage extends CommonMethods {
         //if someone ask this to you in the interview you have to write the same thing
         PageFactory.initElements(driver, this);
     }
+
 }

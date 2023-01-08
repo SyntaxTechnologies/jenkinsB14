@@ -27,6 +27,7 @@ public class DBUtility {
                     ConfigReader.getPropertyValue("dbUsername"),
                     ConfigReader.getPropertyValue("dbPassword"));
             statement = conn.createStatement();
+
             rset = statement.executeQuery(sqlQuery);
 
         } catch (SQLException e) {
