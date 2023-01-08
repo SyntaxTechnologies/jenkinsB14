@@ -1,11 +1,20 @@
 package utils;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class DBUtility {
 
     private static ResultSet rset;
+    private static ResultSetMetaData rSetMetaData;
 
+    /**
+     * This method create connection to the database, execute query and return object ResulSet
+     * @param sqlQuery
+     * @return ResultSet
+     */
     public static ResultSet getResultSet(String sqlQuery) {
 
         Connection conn=null;
@@ -37,5 +46,43 @@ public class DBUtility {
         return rset;
     }
 
+    /**
+     * This methods return an Object of ResultSetMetaData
+     * @param query
+     * @return ResultSetMetaData
+     */
+    public static ResultSetMetaData getRsetMetada(String query){
+        rset= getResultSet(query);
+        rSetMetaData=null;
 
+        try {
+            rSetMetaData=rset.getMetaData();
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+
+        return rSetMetaData;
+
+    }
+
+    /**
+     * This methods extract data from ResultSet and stores into List of Maps
+     */
+
+    public static List<Map<String, String>> getListOfMapsFromRset(String query){
+
+
+        List<Map<String, String>> listFromRset = new ArrayList<>();
+        Map<String, String> mapData;
+
+        try {
+            ResultSetMetaData rsetMetaData = rset.getMetaData();
+
+
+
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+
+    }
 }
