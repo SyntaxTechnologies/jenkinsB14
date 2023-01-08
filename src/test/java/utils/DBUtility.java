@@ -42,27 +42,23 @@ public class DBUtility {
                 e.printStackTrace();
             }
         }
-
         return rset;
     }
 
     /**
-     * This methods return an Object of ResultSetMetaData
+     * This method return an Object of ResultSetMetaData
      * @param query
      * @return ResultSetMetaData
      */
     public static ResultSetMetaData getRsetMetada(String query){
         rset= getResultSet(query);
         rSetMetaData=null;
-
         try {
             rSetMetaData=rset.getMetaData();
         }catch(SQLException e){
             e.printStackTrace();
         }
-
         return rSetMetaData;
-
     }
 
     /**
