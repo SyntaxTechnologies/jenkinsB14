@@ -44,6 +44,13 @@ Feature: Add Employee
   Scenario: Adding multiple employees using excel file
     When user adds multiple employee from excel using "EmployeeData" and verify it
 
+  @db
+  Scenario: Add employee from frontend and verify it from backend
+    And user enter "zalam" and "alia"
+    And captures employeeId
+    And user clicks on save button
+    Then fetch the data from backend and verify it
+
 
 
 
