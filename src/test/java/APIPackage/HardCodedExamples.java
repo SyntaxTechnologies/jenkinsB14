@@ -114,7 +114,7 @@ public class HardCodedExamples {
         response.prettyPrint();
         //verifying the status code
         response.then().assertThat().statusCode(200);
-        response.then().assertThat().body("employee.emp_job_title", equalTo("qa"));
+        response.then().assertThat().body("employee.emp_job_title", equalTo("QA"));
     }
 
 }
