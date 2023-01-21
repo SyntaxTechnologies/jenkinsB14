@@ -1,5 +1,7 @@
 package utils;
 
+import org.json.JSONObject;
+
 public class APIPayloadConstant {
 
     public static String createEmployeePayload(){
@@ -14,6 +16,18 @@ public class APIPayloadConstant {
                         "  \"emp_job_title\": \"QA Engineer\"\n" +
                         "}";
         return createEmployeePayload;
+    }
+
+    public static String createEmployeeJsonBody(){
+        JSONObject obj = new JSONObject();
+        obj.put("emp_firstname", "sara");
+        obj.put("emp_lastname", "bou");
+        obj.put("emp_middle_name", "ms");
+        obj.put("emp_gender", "F");
+        obj.put("emp_birthday", "2011-01-12");
+        obj.put("emp_status", "confirmed");
+        obj.put("emp_job_title","QA Engineer");
+        return obj.toString();
     }
 
     public static String adminPayload(){
