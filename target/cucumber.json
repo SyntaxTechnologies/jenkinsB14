@@ -3,17 +3,15 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-01-21T16:14:38.965Z",
-        "line": 4,
-        "name": "API test case",
+        "line": 3,
+        "name": "for generating the token before every request",
         "description": "",
-        "id": "api-workflow-test;api-test-case",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 4203052900,
+              "duration": 4154094300,
               "status": "passed"
             },
             "line": 5,
@@ -22,6 +20,59 @@
               "location": "APISteps.GenerateTokenSteps.a_jwt_is_generated()"
             },
             "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-01-21T16:35:04.760Z",
+        "line": 8,
+        "name": "API test case for creating the employee",
+        "description": "",
+        "id": "api-workflow-test;api-test-case-for-creating-the-employee",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3447300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "a request is prepared for creating an employee",
+            "match": {
+              "location": "APISteps.APIWorkFlowSteps.a_request_is_prepared_for_creating_an_employee()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 524416900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "a POST call is made to create an employee",
+            "match": {
+              "location": "APISteps.APIWorkFlowSteps.a_post_call_is_made_to_create_an_employee()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 34423000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the status code for creating an employee is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 44
+                }
+              ],
+              "location": "APISteps.APIWorkFlowSteps.the_status_code_for_creating_an_employee_is(java.lang.Integer)"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
