@@ -16,5 +16,14 @@ public class APIPayloadConstant {
         return createEmployeePayload;
     }
 
+    public static String adminPayload(){
+        String adminPayload =
+                "{\n" +
+                        "  \"email\": \"batch14@test.com\",\n" +
+                        "  \"password\": \"Test@123\"\n" +
+                        "}";
+        return adminPayload;
+    }
+
 
 }

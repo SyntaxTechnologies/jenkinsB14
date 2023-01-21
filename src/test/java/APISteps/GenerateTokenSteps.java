@@ -4,6 +4,8 @@ import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import utils.APIConstants;
+import utils.APIPayloadConstant;
 
 import static io.restassured.RestAssured.given;
 
@@ -18,13 +20,10 @@ public class GenerateTokenSteps {
     public void a_jwt_is_generated() {
 
         RequestSpecification request = given()
-                .header("Content-Type", "application/json")
-                .body("{\n" +
-                        "  \"email\": \"batch14@test.com\",\n" +
-                        "  \"password\": \"Test@123\"\n" +
-                        "}");
+                .header(APIConstants.Header_Key_Content_Type, APIConstants.Header_Value_Content_Type)
+                .body(APIPayloadConstant.adminPayload());
 
-        Response response = request.when().post("/generateToken.php");
+        Response response = request.when().post(APIConstants.GENERATE_TOKEN_URI);
 
         //printing the response body
        // response.prettyPrint();

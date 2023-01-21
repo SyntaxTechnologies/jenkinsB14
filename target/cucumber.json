@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4154094300,
+              "duration": 3556297100,
               "status": "passed"
             },
             "line": 5,
@@ -24,7 +24,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-01-21T16:35:04.760Z",
+        "start_timestamp": "2023-01-21T17:34:42.483Z",
         "line": 8,
         "name": "API test case for creating the employee",
         "description": "",
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3447300,
+              "duration": 2005200,
               "status": "passed"
             },
             "line": 9,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 524416900,
+              "duration": 510847000,
               "status": "passed"
             },
             "line": 10,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 34423000,
+              "duration": 40434000,
               "status": "passed"
             },
             "line": 11,
