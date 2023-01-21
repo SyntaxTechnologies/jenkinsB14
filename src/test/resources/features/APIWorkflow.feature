@@ -18,6 +18,11 @@ Feature: API workflow test
     When a GET call is made to get this employee
     Then the status code for this emp is 200
     And the employee id "employee.employee_id" should match with global emp id
+    And the retrieved data at "employee" object should match with the data used for creating the employee
+    |emp_firstname|emp_lastname|emp_middle_name|emp_gender|emp_birthday|emp_status|emp_job_title|
+    |sara         |bou         |ms             |Female    |2011-01-12  |confirmed |QA Engineer  |
+
+
 
 
 

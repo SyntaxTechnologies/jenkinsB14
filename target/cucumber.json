@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3197200,
+              "duration": 3316306500,
               "status": "passed"
             },
             "line": 5,
@@ -24,7 +24,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-01-21T18:08:40.038Z",
+        "start_timestamp": "2023-01-21T19:27:23.507Z",
         "line": 8,
         "name": "API test case for creating the employee",
         "description": "",
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 973800,
+              "duration": 9148300,
               "status": "passed"
             },
             "line": 9,
@@ -46,6 +46,7 @@
           },
           {
             "result": {
+              "duration": 513700200,
               "status": "passed"
             },
             "line": 10,
@@ -57,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 1025000,
+              "duration": 56123200,
               "status": "passed"
             },
             "line": 11,
@@ -75,6 +76,7 @@
           },
           {
             "result": {
+              "duration": 114299800,
               "status": "passed"
             },
             "line": 12,
@@ -96,6 +98,7 @@
           },
           {
             "result": {
+              "duration": 21586600,
               "status": "passed"
             },
             "line": 13,
@@ -127,7 +130,7 @@
         "steps": [
           {
             "result": {
-              "duration": 984700,
+              "duration": 449125800,
               "status": "passed"
             },
             "line": 5,
@@ -140,7 +143,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-01-21T18:08:40.224Z",
+        "start_timestamp": "2023-01-21T19:27:27.687Z",
         "line": 16,
         "name": "Getting the created employee",
         "description": "",
@@ -150,38 +153,105 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 8055800,
+              "status": "passed"
             },
             "line": 17,
             "name": "a request is prepared for getting a created employee",
-            "match": {},
+            "match": {
+              "location": "APISteps.APIWorkFlowSteps.a_request_is_prepared_for_getting_a_created_employee()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 492933700,
+              "status": "passed"
             },
             "line": 18,
             "name": "a GET call is made to get this employee",
-            "match": {},
+            "match": {
+              "location": "APISteps.APIWorkFlowSteps.a_get_call_is_made_to_get_this_employee()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1014700,
+              "status": "passed"
             },
             "line": 19,
             "name": "the status code for this emp is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "APISteps.APIWorkFlowSteps.the_status_code_for_this_emp_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 17454200,
+              "status": "passed"
             },
             "line": 20,
             "name": "the employee id \"employee.employee_id\" should match with global emp id",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"employee.employee_id\"",
+                  "offset": 16
+                }
+              ],
+              "location": "APISteps.APIWorkFlowSteps.the_employee_id_should_match_with_global_emp_id(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cQA Engineer[rr]\u003e but was:\u003cQA Engineer[]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat APISteps.APIWorkFlowSteps.the_retrieved_data_at_object_should_match_with_the_data_used_for_creating_the_employee(APIWorkFlowSteps.java:101)\r\n\tat ✽.the retrieved data at \"employee\" object should match with the data used for creating the employee(file:///C:/Users/sohai/IdeaProjects/New%20folder/CucumberBatch14/src/test/resources/features/APIWorkflow.feature:21)\r\n",
+              "duration": 13181200,
+              "status": "failed"
+            },
+            "line": 21,
+            "name": "the retrieved data at \"employee\" object should match with the data used for creating the employee",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"employee\"",
+                  "offset": 22
+                }
+              ],
+              "location": "APISteps.APIWorkFlowSteps.the_retrieved_data_at_object_should_match_with_the_data_used_for_creating_the_employee(java.lang.String,io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "emp_firstname",
+                  "emp_lastname",
+                  "emp_middle_name",
+                  "emp_gender",
+                  "emp_birthday",
+                  "emp_status",
+                  "emp_job_title"
+                ]
+              },
+              {
+                "cells": [
+                  "sara",
+                  "bou",
+                  "ms",
+                  "Female",
+                  "2011-01-12",
+                  "confirmed",
+                  "QA Engineerrr"
+                ]
+              }
+            ],
             "keyword": "And "
           }
         ],

@@ -1,5 +1,6 @@
 package APISteps;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,6 +9,11 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 import utils.APIConstants;
 import utils.APIPayloadConstant;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import static org.hamcrest.Matchers.*;
 
 import static io.restassured.RestAssured.given;
@@ -76,5 +82,24 @@ public class APIWorkFlowSteps {
         Assert.assertEquals(temporaryEmpId, employee_id);
     }
 
+    @Then("the retrieved data at {string} object should match with the data used for creating the employee")
+    public void the_retrieved_data_at_object_should_match_with_the_data_used_for_creating_the_employee
+            (String employeeObject, DataTable dataTable) {
+    //employeeObject will give the data from response body
+    //data table provides the data in the form of key and value pair
 
+       List<Map<String, String>> expectedData =  dataTable.asMaps();
+       //to get all the keys and values of employee object, we use jsonPath.get method
+       Map<String, String> actualData = response.body().jsonPath().get(employeeObject);
+
+       for(Map<String, String> map : expectedData){
+           //it returns all the keys
+             Set<String> keys =   map.keySet();
+             for (String key:keys){
+                String expectedValue = map.get(key);
+                String actualValue = actualData.get(key);
+                Assert.assertEquals(expectedValue, actualValue);
+             }
+       }
+    }
 }
