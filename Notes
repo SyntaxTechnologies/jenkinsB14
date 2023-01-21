@@ -875,8 +875,46 @@ JsonPath - class
 jsonPath() - it is function/method belongs to JsonPath class
 
 
+Class 7 -
+recap --
+    Rest assured API -
+    DSL - domain specific language
+    it allows us to send/receive data in json format
+
+    base uri = base url
+
+    rest assured api follows BDD approach
+    given - to prepare the request
+    when - send the request/ hitting the end point
+    then - assertion/verification
+
+    to prepare the request -
+    RequestSpecification - we use to prepare the request
+    Response - to store the response body after hitting the end point
+
+    along with given, we provide headers, query parameters, body etc to prepare
+    the request as per the type of method (get, POST)
+
+    JSONPath - class
+    jsonPath() - to provide the functionality of assertions
+
+    Hamcrest matchers - for assertions we use
+
+    we use @Test annotation from junit to run all the test cases
+    but, to execute them alphabatically, we use FixMethodOrder.
 
 
+    C - created the employee
+    R - retrieved the created employee
+    U - updated the employee
+    R - retrieved updated employee
+    D - we didn't use it because of the talent of batch 14
+
+
+under steps package, we have hooks, when we write our steps for API under it,
+hooks will execute, we don't want to execute hooks for API since hooks are for UI
+
+in generate token steps class, we have written the method for generating the token
 
 
 

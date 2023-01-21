@@ -1,6 +1,7 @@
 package runners;
 
 
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -9,11 +10,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         //features we use to provide the path of all the feature files
         features = "src/test/resources/features/",
-        glue = "steps",
+        glue = "APISteps",
         //when you set dry run to true, it stops actual execution
         //it will quickly scan all the gherkin steps whether they are implemented or not
         //when we set dry run to false, it starts execution again
-        dryRun = true,
+        dryRun = false,
         tags = "@api",
         //to remove irrelavant information from console, you need to set monochrome to true
         monochrome = true,
@@ -22,9 +23,8 @@ import org.junit.runner.RunWith;
 
         plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json",
                 //this failed.txt file holds all the scenarios which are failed  during execution
-        "rerun:target/failed.txt"}
+                "rerun:target/failed.txt"}
 )
 
-public class SmokeRunner {
-
+public class APIRunner {
 }
