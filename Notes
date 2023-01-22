@@ -938,6 +938,10 @@ U - update the employee and we will verify it
 After performing the operations, we identified one more need to
 pass body/payload in easy format, so we implemented JSON format in APIPayload constant class
 
+HOMEWORK --- HOMEWORK -- HOMEWORK -- HOWEWORK -- HOMEWORK --
+
+update the existing employee details - PUT
+and verify the data - GET
 
 
 

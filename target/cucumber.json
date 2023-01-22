@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1972900,
+              "duration": 4177953200,
               "status": "passed"
             },
             "line": 5,
@@ -24,7 +24,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-01-22T15:41:12.296Z",
+        "start_timestamp": "2023-01-22T15:51:56.583Z",
         "line": 34,
         "name": "API test case for creating the employee using highly dynamic body",
         "description": "",
@@ -34,16 +34,50 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 15051400,
+              "status": "passed"
             },
             "line": 35,
             "name": "a request is prepared for creating an employee with dynamic data \"Sara\" , \"bou\"  , \"ms\" , \"F\" , \"2011-01-12\" , \"confirmed\" , \"QA Engineer\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sara\"",
+                  "offset": 65
+                },
+                {
+                  "val": "\"bou\"",
+                  "offset": 74
+                },
+                {
+                  "val": "\"ms\"",
+                  "offset": 83
+                },
+                {
+                  "val": "\"F\"",
+                  "offset": 90
+                },
+                {
+                  "val": "\"2011-01-12\"",
+                  "offset": 96
+                },
+                {
+                  "val": "\"confirmed\"",
+                  "offset": 111
+                },
+                {
+                  "val": "\"QA Engineer\"",
+                  "offset": 125
+                }
+              ],
+              "location": "APISteps.APIWorkFlowSteps.a_request_is_prepared_for_creating_an_employee_with_dynamic_data(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 547265000,
+              "status": "passed"
             },
             "line": 36,
             "name": "a POST call is made to create an employee",
@@ -54,7 +88,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 59534800,
+              "status": "passed"
             },
             "line": 37,
             "name": "the status code for creating an employee is 201",
@@ -71,7 +106,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 102261400,
+              "status": "passed"
             },
             "line": 38,
             "name": "the response body contains key \"Message\" and value \"Employee Created\"",
@@ -92,7 +128,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 31350300,
+              "status": "passed"
             },
             "line": 39,
             "name": "the employee id \"Employee.employee_id\" is stored as global to be used for other request",
