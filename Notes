@@ -916,6 +916,29 @@ hooks will execute, we don't want to execute hooks for API since hooks are for U
 
 in generate token steps class, we have written the method for generating the token
 
+Class 8 -
+
+recap -
+    - integrated (added)Rest assured with cucumber
+    - to add rest assured we added feature file
+    - then API steps package, we dont want to execute hooks
+    - to generate token automatically everytime, we implemented a class
+    - API runner class to run only API test cases
+    - API constant class to pass all the constants of the API
+    - API Payload constant class to pass the body/payload
+
+NOW TALK ABOUT OPERATIONS:::::
+
+C - we wrote a scenario for creating the employee and verify it
+R - retrieved the created employee and verify it
+
+We will do
+U - update the employee and we will verify it
+
+After performing the operations, we identified one more need to
+pass body/payload in easy format, so we implemented JSON format in APIPayload constant class
+
+
 
 
 
